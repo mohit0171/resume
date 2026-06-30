@@ -1,4 +1,4 @@
-Here is the resume link: 
+Here is the resume link: https://mohit0171.github.io/resume/
 # 📄 Mohit Singh Mahra - Resume
 
 Welcome to my resume repository.
