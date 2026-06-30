@@ -1,161 +1,204 @@
-/* 1. GLOBAL RESETS & STYLING */
-* {
+*{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Segoe UI', Inter, Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
 }
 
 body {
-    background-color: #f4f7f6;
-    color: #2d3748; 
-    line-height: 1.6;
+    background: #eef2f5;
+    color: #2c3e50;
     padding: 40px 20px;
+    display: flex;
+    flex-direction: column; /* Stacks main and footer vertically */
+    justify-content: flex-start;
+    align-items: center;
+    min-height: 100vh; /* Forces body to take up the full screen height */
 }
 
-/* 2. MAIN CONTAINER LAYOUT */
 main {
-    max-width: 850px;
-    margin: 0 auto;
-    background-color: #ffffff;
-    border-radius: 16px; 
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05); 
-    overflow: hidden;
-    padding: 40px;
-} 
-
-/*3. INTRO SECTION */
-.intro {
     display: flex;
+    background: #ffffff;
+    width: 100%;
+    max-width: 1000px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    border-radius: 4px;
+    overflow: hidden;
+    margin-bottom: auto; /* Pushes everything below it (the footer) to the absolute bottom */
+}
+
+aside {
+    width: 33%;
+    background: #1e252b; 
+    color: #e0e6ed;
+    padding: 40px 30px;
+    display: flex;
+    flex-direction: column;
     align-items: center;
-    gap: 30px;
-    border-bottom: 2px solid #edf2f7;
-    padding-bottom: 35px;
+}
+
+aside img {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    border: 4px solid #dfa127;
+    object-fit: cover;
     margin-bottom: 35px;
 }
 
-.profile-img {
-    width: 300px;
-    height: 300px;
-    border-radius: 50%; 
-    object-fit: cover;
-    border: 4px solid #3182ce; 
-    box-shadow: 0 4px 10px rgba(49, 130, 206, 0.2);
+aside section {
+    width: 100%;
+    margin-bottom: 35px;
 }
 
-.intro h1 {
-    font-size: 32px;
-    color: #1a202c;
+aside h2 {
+    font-size: 15px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: #ffffff;
+    margin-bottom: 15px;
+    border-bottom: 1.5px solid goldenrod;
+    padding-bottom: 6px;
+}
+
+aside p {
+    font-size: 13.5px;
+    margin-bottom: 12px;
+    line-height: 1.4;
+    color: #b0bec5;
+}
+
+aside p strong {
+    display: block;
+    color: #ffffff;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    margin-bottom: 2px;
+}
+
+aside ul {
+    list-style-type: none; 
+    padding-left: 0;
+}
+
+aside li {
+    font-size: 13.5px;
+    margin-bottom: 9px;
+    position: relative;
+    padding-left: 14px;
+    color: #d1dbe5;
+}
+
+aside li::before {
+    content: "•";
+    color: #dfa127; 
+    position: absolute;
+    left: 0;
+    font-size: 14px;
+}
+
+article {
+    width: 67%;
+    padding: 50px 45px;
+    background: #ffffff;
+}
+
+article h1 {
+    font-size: 40px;
     font-weight: 700;
+    color: #1a1a1a;
+    letter-spacing: -0.5px;
     margin-bottom: 6px;
+    text-transform: uppercase;
 }
 
-.intro p {
-    color: #4a5568;
-    font-weight: 500;
-    font-size: 16px;
+article .p {
+    margin-bottom: 35px;
+    padding-bottom: 15px;
+    border-bottom: 2px solid #1a1a1a; 
 }
 
-/*4. CORE SECTIONS*/
-section {
-    margin-bottom: 40px;
+article .p p {
+    font-size: 18px;
+    font-weight: 600;
+    color: #555555;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-top: 0;
 }
 
-section h2 {
-    font-size: 20px;
-    color: #2b6cb0; 
+article section {
+    margin-bottom: 35px;
+}
+
+article h2 {
+    font-size: 18px;
+    color: #000000; 
     text-transform: uppercase;
     letter-spacing: 1px;
-    margin-bottom: 15px;
-    display: flex;
-    align-items: center;
-    border-bottom: 2px solid #ebf8ff;
-    padding-bottom: 5px;
+    border-bottom: 3px solid goldenrod;
+    padding-bottom: 8px;
+    margin-bottom: 18px;
 }
 
-section p {
-    color: #4a5568;
+article h3 {
     font-size: 15px;
-}
-
-/*5. EDUCATION & PROJECTS */
-.eduction h3, .project h3 {
-    font-size: 16px;
+    font-weight: 700;
     color: #2d3748;
-    margin-top: 15px;
-    font-weight: 600;
+    margin-top: 0;
+    margin-bottom: 4px;
 }
 
-.project h3::before {
-    content: "🚀 "; 
-}
-
-/*6. SKILLS & HOBBIES*/
-.skills ul, .hobbie ul {
-    list-style: none;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    margin-top: 10px;
-}
-
-.skills ul li, .hobbie ul li {
-    background-color: #ebf8ff; 
-    color: #2b6cb0;
-    padding: 6px 16px;
-    border-radius: 20px; 
+article p {
     font-size: 14px;
-    font-weight: 600;
-    transition: all 0.2s ease;
-}
-.skills ul li:hover, .hobbie ul li:hover {
-    background-color: #2b6cb0;
-    color: #ffffff;
-    transform: translateY(-2px);
-}
-.hobbie ul li {
-    background-color: #f0fff4; 
-    color: #38a169;
-}
-.hobbie ul li:hover {
-    background-color: #38a169;
-}
-
-/* 7. CONTACT DETAILS & FOOTER */
-.contact address {
-    font-style: normal;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); 
-    gap: 15px;
-    background-color: #f7fafc;
-    padding: 20px;
-    border-radius: 8px;
-    border-left: 4px solid #2b6cb0;
-}
-
-.contact address p {
-    font-size: 14px;
-}
-
-.contact address a {
-    color: #3182ce;
-    font-weight: 600;
-    transition: color 0.2s ease;
-}
-
-.contact address a:hover {
-    color: #2b6cb0;
-    text-decoration: underline;
+    color: #4a5568;
+    line-height: 1.6;
+    margin-top: 4px;
+    margin-bottom: 15px;
+    text-align: justify;
 }
 
 footer {
+    width: 100%;
     text-align: center;
-    margin-top: 40px;
     padding-top: 20px;
-    border-top: 1px solid #edf2f7;
+    font-size: 12px;
+    color: #a0aec0;
 }
 
-footer p {
-    font-size: 13px;
-    color: #a0aec0;
+@media(max-width: 768px){
+    body {
+        padding: 10px;
+    }
+    main {
+        flex-direction: column;
+    }
+    aside {
+        width: 100%;
+        align-items: flex-start;
+        padding: 35px;
+    }
+    aside img {
+        align-self: center;
+    }
+    article {
+        width: 100%;
+        padding: 35px;
+    }
+}
+
+.collage{
+    color: goldenrod;
+    margin-top: -4px;
+    margin-bottom: 10px;
+}
+
+.school{
+    color: goldenrod;
+    margin-top: -4px;
+    margin-bottom: 10px;
+}
+.mahra{
+    color: goldenrod;
 }
