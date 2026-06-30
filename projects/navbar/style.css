@@ -1,0 +1,66 @@
+/* Reset default margins and padding  */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Background canvas setup */
+body {
+    background-color: #f7f4ee; /* Soft off-white canvas match 🥛 */
+}
+
+/* Containing frame box  */
+main {
+    width: 100%;
+    max-width: 900px;
+    margin: 80px auto; 
+    padding: 10px;
+}
+
+/* The Main Navbar Container  */
+.navbar {
+   background-color: #4a151b; /* Beautiful deep maroon/chocolate color from your image 🍫 */
+   padding: 14px 28px;
+   border-radius: 12px; /* Smooth rounded corners 🥚 */
+   display: flex;
+   align-items: center; /* Aligns logo and links vertically straight 📏 */
+   justify-content: space-between; /* Pushes logo left, menu links right! 💥 */
+   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+}
+
+/* Logo Styling left side  */
+.logo {
+    color: #cca45c; /* Muted gold/ochre color text from your screen 🟡 */
+    font-size: 22px;
+    font-weight: 700;
+}
+
+/* List container right side */
+.navbar ul {
+    display: flex; 
+    list-style: none; 
+    align-items: center;
+    gap: 8px; /* Adds clean spacing between text elements 📐 */
+}
+
+/* Clickable Menu Links */
+.navbar ul li a {
+    color: #b08c90; /* Soft dark-tinted rose link text 🪵 */
+    font-weight: 600;
+    font-size: 15px;
+    padding: 8px 18px;
+    border-radius: 20px; /* Fully rounded caps 🔴 */
+    transition: all 0.2s ease-in-out;
+}
+.navbar ul li a:hover {
+    color: #ffffff;
+    background-color: rgba(255, 255, 255, 0.1); /* Subtle translucent shimmer 🌪️ */
+}
+.navbar ul li a.active {
+    color: #ffffff !important; /* Forces text to remain bright white ⚪ */
+    background-color: #bd5e33; /* Terracotta orange capsule background from your snap 🍊 */
+    box-shadow: 0 2px 8px rgba(189, 94, 51, 0.3);
+}
