@@ -1,0 +1,220 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+}
+
+body {
+    background: #eef2f5;
+    color: #2c3e50;
+    padding: 40px 20px;
+    display: flex;
+    flex-direction: column; /* Stacks main and footer vertically */
+    justify-content: flex-start;
+    align-items: center;
+    min-height: 100vh; /* Forces body to take up the full screen height */
+}
+
+main {
+    display: flex;
+    background: #ffffff;
+    width: 100%;
+    max-width: 1000px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    border-radius: 4px;
+    overflow: hidden;
+    margin-bottom: auto; /* Pushes everything below it (the footer) to the absolute bottom */
+}
+
+aside {
+    width: 33%;
+    background: #1e252b; 
+    color: #e0e6ed;
+    padding: 40px 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+aside img {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    border: 4px solid #dfa127;
+    object-fit: cover;
+    margin-bottom: 35px;
+}
+
+aside section {
+    width: 100%;
+    margin-bottom: 35px;
+}
+
+aside h2 {
+    font-size: 15px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: #ffffff;
+    margin-bottom: 15px;
+    border-bottom: 1.5px solid goldenrod;
+    padding-bottom: 6px;
+}
+
+aside p {
+    font-size: 13.5px;
+    margin-bottom: 12px;
+    line-height: 1.4;
+    color: #b0bec5;
+}
+
+aside p strong {
+    display: block;
+    color: #ffffff;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    margin-bottom: 2px;
+}
+
+aside ul {
+    list-style-type: none; 
+    padding-left: 0;
+}
+
+aside li {
+    font-size: 13.5px;
+    margin-bottom: 9px;
+    position: relative;
+    padding-left: 14px;
+    color: #d1dbe5;
+}
+
+aside li::before {
+    content: "•";
+    color: #dfa127; 
+    position: absolute;
+    left: 0;
+    font-size: 14px;
+}
+
+a:link{
+    color: blue;      /* Normal link */
+}
+
+a:visited{
+    color: rgb(95, 28, 176);   /* After visiting */
+}
+
+a:hover{
+    color: rgb(255, 221, 0);      /* When mouse is over it */
+}
+
+a:active{
+    color: green;    /* While clicking */
+}
+
+article {
+    width: 67%;
+    padding: 50px 45px;
+    background: #ffffff;
+}
+
+article h1 {
+    font-size: 40px;
+    font-weight: 700;
+    color: #1a1a1a;
+    letter-spacing: -0.5px;
+    margin-bottom: 6px;
+    text-transform: uppercase;
+}
+
+article .p {
+    margin-bottom: 35px;
+    padding-bottom: 15px;
+    border-bottom: 2px solid #1a1a1a; 
+}
+
+article .p p {
+    font-size: 18px;
+    font-weight: 600;
+    color: #555555;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-top: 0;
+}
+
+article section {
+    margin-bottom: 35px;
+}
+
+article h2 {
+    font-size: 18px;
+    color: #000000; 
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-bottom: 3px solid goldenrod;
+    padding-bottom: 8px;
+    margin-bottom: 18px;
+}
+
+article h3 {
+    font-size: 15px;
+    font-weight: 700;
+    color: #2d3748;
+    margin-top: 0;
+    margin-bottom: 4px;
+}
+
+article p {
+    font-size: 14px;
+    color: #4a5568;
+    line-height: 1.6;
+    margin-top: 4px;
+    margin-bottom: 15px;
+    text-align: justify;
+}
+
+footer {
+    width: 100%;
+    text-align: center;
+    padding-top: 20px;
+    font-size: 12px;
+    color: #a0aec0;
+}
+
+@media(max-width: 768px){
+    body {
+        padding: 10px;
+    }
+    main {
+        flex-direction: column;
+    }
+    aside {
+        width: 100%;
+        align-items: flex-start;
+        padding: 35px;
+    }
+    aside img {
+        align-self: center;
+    }
+    article {
+        width: 100%;
+        padding: 35px;
+    }
+}
+
+.collage{
+    color: goldenrod;
+    margin-top: -4px;
+    margin-bottom: 10px;
+}
+
+.school{
+    color: goldenrod;
+    margin-top: -4px;
+    margin-bottom: 10px;
+}
+.mahra{
+    color: goldenrod;
+}
